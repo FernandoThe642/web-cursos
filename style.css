@@ -63,6 +63,30 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 3px;
 }
+
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: #444;
+}
+
+
+.informacion-curso {
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalles-curso {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
 #descripcion {
     width: 100%; 
     height: 100px;
@@ -70,6 +94,7 @@ input, textarea {
     border: 1px solid #ccc;
     resize: none;
 }
+
 
 button {
     margin-top: 20px;

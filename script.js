@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p><strong>Duración:</strong> ${curso.duracion} semanas</p>
                     <p><strong>Descripción:</strong> ${curso.descripcion}</p>
                 </div>
-             </div>   
+            </div>   
             `;
     
     // Mostrar detalles 
