@@ -20,26 +20,70 @@
         <a href="#contacto">Contacto</a>
     </nav>
 
-    <section id="inicio">
+    <section id="inicio">w
         <h2>Bienvenido</h2>
-        <p class="seccion"> 
-
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+            eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+            quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi 
+            tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
+            ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea 
+            voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>
     </section>
 
     <section id="cursos">
         <h2>Cursos</h2>
 
+        <ul id="lista-cursos">
+
+        </ul>
     </section>
 
     <section id="agregar-curso">
         <h2>Agregar Curso</h2>
 
+        <div>
+            <fieldset>
+                <form id="formulario-curso">
+                    <label for="nombre-curso">Nombre del curso:</label>
+                    <input type="text" id="nombre-curso" required>
+                    <br>
+                    <label for="nombre-instructor">Nombre del instructor:</label>
+                    <input type="text" id="nombre-instructor" required>
+                    <br>
+                    <label for="fecha-inicio">Fecha de inicio:</label>
+                    <input type="date" id="fecha-inicio" required>
+                    <br>
+                    <label for="duracion">Duración (semanas):</label>
+                    <input type="number" id="duracion" min="1" required>
+                    <br>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" required></textarea>
+                    <br>
+                    <button type="submit">Agregar Curso</button>
+                </form>
+            </fieldset>
+
+        </div>
     </section>
 
     <section id="Contacto">
         <h2>Contacto</h2>
-
+        <li style="text-align: left;">
+            <p style="text-align: left;">Para más información o consultas, puedes contactar a: <br>
+            <strong>Nombre:</strong> Fernando Sánchez <br>
+            <strong>Correo electrónico:</strong> fernandosanchez@dominio.com <br>
+            <strong>Teléfono:</strong> 0968796244 <br>
+            </p>
+        </li>    
     </section>
 
     <footer>
