@@ -1,6 +1,6 @@
-body { 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 
-                    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+/* Estilos generales */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
     background-color: gainsboro;
@@ -9,38 +9,55 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
+/* Encabezado */
 header {
     background-color: #333;
     color: azure;
     display: flex;
-    align-items: right;
-    padding: 10px;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+    justify-content: space-between;
 }
 
 header img {
-    border-radius: 85%;
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
 }
+
+header h1 {
+    font-size: 1.5rem;
+    flex: 1; /* Ocupa el espacio disponible */
+    text-align: center;
+}
+
+/* Menú de navegación */
 nav {
     background-color: #444;
     padding: 10px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 10px 15px;
+    margin: 5px;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    font-size: 1rem;
 }
 
 nav a:hover {
     background-color: #555;
 }
 
+/* Estilos para títulos */
 h2 {
     color: #333;
     border-bottom: 2px solid #333;
@@ -48,6 +65,18 @@ h2 {
     text-align: center;
 }
 
+/* Contenedor principal */
+.contenedor {
+    max-width: 90%;
+    width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formularios */
 form {
     display: flex;
     flex-direction: column;
@@ -58,59 +87,31 @@ label {
 }
 
 input, textarea {
-    padding: 10px;
+    padding: 12px;
     margin-top: 5px;
     border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-.contenedor {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 20px;
     border-radius: 5px;
-    box-shadow: #444;
+    width: 100%; /* Se ajusta a pantalla */
+    font-size: 1rem;
 }
-
-
-.informacion-curso {
-    margin-bottom: 10px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.detalles-curso {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-#descripcion {
-    width: 100%; 
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    resize: none;
-}
-
 
 button {
     margin-top: 20px;
-    padding: 10px;
+    padding: 12px;
     background-color: #444;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
 }
 
 button:hover {
     background-color: #555;
 }
 
-
+/* Lista de elementos */
 ul {
     list-style: none;
     padding: 0;
@@ -126,13 +127,92 @@ li {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
+/* Pie de página */
 footer {
     background-color: #333;
-    color: #fff;
+    color: azure;
     text-align: center;
-    padding: 10px 0;
-    bottom: 0;
-    width: 100%;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* ========== ESTILOS RESPONSIVOS ========== */
+
+/* Teléfonos pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .contenedor {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 14px;
+    }
+}
+
+/* Tablets (480px - 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .contenedor {
+        width: 85%;
+        padding: 20px;
+    }
+}
+
+/* Pantallas grandes (más de 1024px) */
+@media (min-width: 1024px) {
+    header {
+        padding: 15px 40px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    .contenedor {
+        max-width: 70%;
+    }
 }
